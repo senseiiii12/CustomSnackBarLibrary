@@ -21,6 +21,4 @@ fun FancyButton(
     Button(onClick = onClick, modifier = modifier.padding(8.dp)) {
         Text(text = label)
     }
-
-
 }
