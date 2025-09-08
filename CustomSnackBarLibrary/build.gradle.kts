@@ -43,8 +43,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     api(libs.androidx.activity.compose)
 
-//    implementation(libs.androidx.appcompat)  // Remove if not needed
-//    implementation(libs.material)  // Remove if not needed
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
