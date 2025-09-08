@@ -31,8 +31,8 @@ dependencies {
     implementation 'com.github.senseiiii12:CustomSnackBarLibrary:0.2.0'
 }
 ```
-# Использование
-## Оборачиваем экран в `SnackSwipeBox`
+## 2. Использование
+### Оборачиваем экран в `SnackSwipeBox`
 
 SnackSwipeBox создаёт SnackSwipeController и размещает хост для отображения snackbar.
 Контроллер пробрасывается в контент, и через него можно показывать сообщения.
@@ -83,7 +83,7 @@ SnackSwipeBox { snackSwipeController ->
     }
 }
 ```
-## `SnackSwipeController`
+### `SnackSwipeController`
 Методы для управления snackbar:
 ```kotlin
 fun SnackSwipeController.showSnackSwipe(
