@@ -32,12 +32,12 @@ dependencies {
 }
 ```
 # Использование
-## Оборачиваем экран в SnackBarBox
+## Оборачиваем экран в `SnackSwipeBox`
 
-SnackBarBox создаёт SnackSwipeController и размещает хост для отображения snackbar.
+SnackSwipeBox создаёт SnackSwipeController и размещает хост для отображения snackbar.
 Контроллер пробрасывается в контент, и через него можно показывать сообщения.
 ```kotlin
-SnackSwipeBox { snackbarController ->
+SnackSwipeBox { snackSwipeController ->
     Column( // you any content
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -45,7 +45,7 @@ SnackSwipeBox { snackbarController ->
     ) {
         Button(
             onClick = {
-                snackbarController.showSnackSwipe(
+                snackSwipeController.showSnackSwipe(
                     messageText = {
                         Text(
                             text = "It`s custom SnackSwipe",
@@ -67,7 +67,7 @@ SnackSwipeBox { snackbarController ->
                         )
                     },
                     dismissAction = {
-                        IconButton(onClick = { snackbarController.close() }) {
+                        IconButton(onClick = { snackSwipeController.close() }) {
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription = null,
@@ -83,7 +83,7 @@ SnackSwipeBox { snackbarController ->
     }
 }
 ```
-## SnackSwipeController
+## `SnackSwipeController`
 Методы для управления snackbar:
 ```kotlin
 fun SnackSwipeController.showSnackSwipe(
