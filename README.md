@@ -1,16 +1,23 @@
-# SwipeSnack 🍫
 
-**SwipeSnack** - is a lightweight Jetpack Compose library for custom Snackbars with support for:
-- Swipe to hide,
-- Icon, text and actions customization,
-- Auto-disappear on timer,
-- Convenient API via `SnackSwipeBox`.
+ <h1 align="center">◀ SwipeSnack ▶</h1>
+
+<p align="center">
+  <a href="https://jitpack.io/#senseiiii12/CustomSnackBarLibrary">
+    <img src="https://jitpack.io/v/senseiiii12/CustomSnackBarLibrary.svg" />
+  </a>
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
+  <img src="https://img.shields.io/badge/Kotlin-1.9.24-blue.svg" />
+  <img src="https://img.shields.io/badge/Compose-1.5.3-blue.svg" />
+</p>
+
+
+**SwipeSnack** - is a lightweight Jetpack Compose library for custom Snackbars with support for:<br>
+
+✔ Swipe to hide<br>
+✔ Icon, text and actions customization<br>
+✔ Auto-disappear on timer<br>
+✔ Convenient API via `SnackSwipeBox`.<br>
   
-[![](https://jitpack.io/v/senseiiii12/CustomSnackBarLibrary.svg)](https://jitpack.io/#senseiiii12/CustomSnackBarLibrary)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)
-![Compose](https://img.shields.io/badge/Compose-1.5.3-blue.svg)
-
 ## 1. Connecting a repository
 
 The library is available via JitPack.
@@ -38,7 +45,8 @@ SnackSwipeBox creates a SnackSwipeController and places a host to display the sn
 The controller is passed into the content, and messages can be displayed through it.
 ```kotlin
 SnackSwipeBox { snackSwipeController ->
-    Column( // you any content
+    // you any content
+    Column( 
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -67,6 +75,7 @@ SnackSwipeBox { snackSwipeController ->
             Text("Show SnackSwipe")
         }
     }
+    // you any content
 }
 ```
 ### `SnackSwipeController`
