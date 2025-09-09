@@ -1,4 +1,4 @@
-package com.snackbar.customsnackbarlibrary
+package com.snackbar.snackswipe
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -21,7 +21,7 @@ fun SnackSwipeBox(
 
     Box(modifier = modifier) {
         content(snackSwipeController)
-        CustomSnackbarHost(
+        SnackSwipeHost(
             controller = snackSwipeController,
             modifier = Modifier.align(Alignment.TopCenter)
         )

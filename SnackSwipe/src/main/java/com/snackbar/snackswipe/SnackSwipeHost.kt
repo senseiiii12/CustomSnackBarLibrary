@@ -1,4 +1,4 @@
-package com.snackbar.customsnackbarlibrary
+package com.snackbar.snackswipe
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExitTransition
@@ -53,7 +53,7 @@ private const val DISMISS_ANIMATION_DELAY = 200
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-internal fun CustomSnackbarHost(
+internal fun SnackSwipeHost(
     controller: SnackSwipeController,
     modifier: Modifier = Modifier
 ) {

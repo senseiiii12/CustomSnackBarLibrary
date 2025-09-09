@@ -1,4 +1,4 @@
-package com.snackbar.customsnackbarlibrary
+package com.snackbar.snackswipe
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape

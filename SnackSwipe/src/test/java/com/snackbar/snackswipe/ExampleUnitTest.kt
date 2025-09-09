@@ -1,4 +1,4 @@
-package com.snackbar.customsnackbarlibrary
+package com.snackbar.snackswipe
 
 import org.junit.Test
 

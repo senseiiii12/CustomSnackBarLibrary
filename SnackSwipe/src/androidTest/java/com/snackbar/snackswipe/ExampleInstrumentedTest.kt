@@ -1,4 +1,4 @@
-package com.snackbar.customsnackbarlibrary
+package com.snackbar.snackswipe
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
