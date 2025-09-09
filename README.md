@@ -1,20 +1,20 @@
 # SwipeSnack 🍫
 
-**SwipeSnack** — это лёгкая Jetpack Compose библиотека для кастомных Snackbar с поддержкой:
-- свайпа для скрытия,
-- кастомизации иконки, текста и экшенов,
-- автоматического исчезновения по таймеру,
-- удобного API через `SnackSwipeBox`.
+**SwipeSnack** - is a lightweight Jetpack Compose library for custom Snackbars with support for:
+- Swipe to hide,
+- Icon, text and actions customization,
+- Auto-disappear on timer,
+- Convenient API via `SnackSwipeBox`.
   
 [![](https://jitpack.io/v/senseiiii12/CustomSnackBarLibrary.svg)](https://jitpack.io/#senseiiii12/CustomSnackBarLibrary)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)
 ![Compose](https://img.shields.io/badge/Compose-1.5.3-blue.svg)
 
-## 1. Подключение репозитория
+## 1. Connecting a repository
 
-Библиотека доступна через JitPack.
-Добавьте репозиторий JitPack в ваш settings.gradle.kts:
+The library is available via JitPack.
+Add the JitPack repository to your `settings.gradle.kts`:
 ```kotlin
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -31,11 +31,11 @@ dependencies {
     implementation 'com.github.senseiiii12:CustomSnackBarLibrary:0.2.0'
 }
 ```
-## 2. Использование
-### Оборачиваем экран в `SnackSwipeBox`
+## 2. Usage
+### Wrap the screen in `SnackSwipeBox`
 
-SnackSwipeBox создаёт SnackSwipeController и размещает хост для отображения snackbar.
-Контроллер пробрасывается в контент, и через него можно показывать сообщения.
+SnackSwipeBox creates a SnackSwipeController and places a host to display the snackbar.
+The controller is passed into the content, and messages can be displayed through it.
 ```kotlin
 SnackSwipeBox { snackSwipeController ->
     Column( // you any content
@@ -45,29 +45,15 @@ SnackSwipeBox { snackSwipeController ->
     ) {
         Button(
             onClick = {
-                snackSwipeController.showSnackSwipe(
+                snackSwipeController.showSnackSwipe(  //show SnackSwipe
                     messageText = {
                         Text(
                             text = "It`s custom SnackSwipe",
                             color = Color.White
                         )
                     },
-                    icon = {
-                        Icon(
-                            Icons.Default.CheckCircle,
-                            contentDescription = null,
-                            tint = Color.Green
-                        )
-                    },
-                    customAction = {
-                        Text(
-                            text = "Send",
-                            modifier = Modifier.clickable {},
-                            color = Color.White
-                        )
-                    },
                     dismissAction = {
-                        IconButton(onClick = { snackSwipeController.close() }) {
+                        IconButton(onClick = { snackSwipeController.close() }) {  //close action SnackSwipe
                             Icon(
                                 Icons.Default.Close,
                                 contentDescription = null,
@@ -84,7 +70,7 @@ SnackSwipeBox { snackSwipeController ->
 }
 ```
 ### `SnackSwipeController`
-Методы для управления snackbar:
+Methods for managing the snackbar:
 ```kotlin
 fun SnackSwipeController.showSnackSwipe(
     messageText: @Composable () -> Unit,
